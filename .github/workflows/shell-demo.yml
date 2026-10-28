@@ -1,17 +1,18 @@
 
-name: Run Shell Script
+name: List WSL Files
 
 on:
-  push:
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
-  run-shell-script:
-    runs-on: self-hosted
+  list-files:
+    runs-on: [self-hosted, linux, x64]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Run shell script
+      - name: List files in Durga home directory
         run: bash scripts/hello.sh
