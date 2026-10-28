@@ -2,4 +2,4 @@
 echo ""
 echo "Step 11: Listing folder paths on server"
 
-cd/home/durga/& ls
+cd /home/durga/& ls
